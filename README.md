@@ -1,8 +1,8 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/logo/dark.png" />
-    <source media="(prefers-color-scheme: light)" srcset="docs/logo/light.png" />
-    <img alt="praison Logo" src="docs/logo/light.png" />
+    <source media="(prefers-color-scheme: dark)" srcset="src/praisonai/praisonai/public/banner.png" />
+    <source media="(prefers-color-scheme: light)" srcset="src/praisonai/praisonai/public/banner.png" />
+    <img alt="Praison Banner" src="src/praisonai/praisonai/public/banner.png" />
   </picture>
 </p>
 
