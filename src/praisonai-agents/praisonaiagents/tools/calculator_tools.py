@@ -165,7 +165,7 @@ class CalculatorTools:
             n = len(numbers)
             mean = sum(numbers) / n
             
-            # Calculate variance and std dev
+            # Calculate variance and standard deviation
             squared_diff_sum = sum((x - mean) ** 2 for x in numbers)
             variance = squared_diff_sum / (n - 1) if n > 1 else 0
             std_dev = math.sqrt(variance)
