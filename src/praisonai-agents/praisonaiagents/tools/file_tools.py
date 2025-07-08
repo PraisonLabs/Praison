@@ -5,7 +5,7 @@ from praisonaiagents.tools import file_tools
 content = file_tools.read_file("example.txt")
 file_tools.write_file("output.txt", "Hello World")
 
-or 
+or
 from praisonaiagents.tools import read_file, write_file, list_files
 content = read_file("example.txt")
 """
