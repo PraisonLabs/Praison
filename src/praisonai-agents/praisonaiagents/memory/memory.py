@@ -18,7 +18,6 @@ try:
     CHROMADB_AVAILABLE = True
 except ImportError:
     CHROMADB_AVAILABLE = False
-    pass
 
 try:
     import mem0
