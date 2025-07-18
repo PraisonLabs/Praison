@@ -14,7 +14,7 @@ from rich.logging import RichHandler
 from rich.live import Live
 import asyncio
 
-# # Configure root logger
+# Configure root logger
 # logging.basicConfig(level=logging.WARNING)
 
 # Suppress litellm logs
