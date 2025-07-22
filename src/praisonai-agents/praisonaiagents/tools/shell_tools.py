@@ -7,12 +7,13 @@ This module provides a safe interface for executing shell commands with:
 - Resource limits
 """
 
-import subprocess
-import shlex
 import logging
 import os
+import shlex
+import subprocess
 import time
 from typing import Dict, List, Optional, Union
+
 from ..approval import require_approval
 
 class ShellTools:
