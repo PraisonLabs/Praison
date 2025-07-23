@@ -7,23 +7,23 @@
 </p>
 
 <p align="center">
-<a href="https://github.com/MervinPraison/praison"><img src="https://static.pepy.tech/badge/praison" alt="Total Downloads" /></a>
-<a href="https://github.com/MervinPraison/praison"><img src="https://img.shields.io/github/v/release/MervinPraison/praison" alt="Latest Stable Version" /></a>
-<a href="https://github.com/MervinPraison/praison"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License" /></a>
+<a href="https://github.com/PraisonLabs/Praison"><img src="https://static.pepy.tech/badge/praison" alt="Total Downloads" /></a>
+<a href="https://github.com/PraisonLabs/Praison"><img src="https://img.shields.io/github/v/release/PraisonLabs/Praison" alt="Latest Stable Version" /></a>
+<a href="https://github.com/PraisonLabs/Praison"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License" /></a>
 </p>
 
 <div align="center">
 
 # Praison AI
 
-<a href="https://trendshift.io/repositories/9130" target="_blank"><img src="https://trendshift.io/api/badge/repositories/9130" alt="MervinPraison%2Fpraison | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+<a href="https://trendshift.io/repositories/9130" target="_blank"><img src="https://trendshift.io/api/badge/repositories/9130" alt="PraisonLabs%2Fpraison | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
 </div>
 
 praison is a production-ready Multi-AI Agents framework with self-reflection, designed to create AI Agents to automate and solve problems ranging from simple tasks to complex challenges. By integrating praison Agents, AG2 (Formerly AutoGen), and CrewAI into a low-code solution, it streamlines the building and management of multi-agent LLM systems, emphasising simplicity, customisation, and effective human-agent collaboration.
 
 <div align="center">
-  <a href="https://p-doc-eight.vercel.app/" target="_blank">
+  <a href="https://docs.praisonlabs.com/" target="_blank">
     <p align="center">
       <img src="https://img.shields.io/badge/📚_Documentation-Visit_docs.praison.ai-blue?style=for-the-badge&logo=bookstack&logoColor=white" alt="Documentation" />
     </p>
