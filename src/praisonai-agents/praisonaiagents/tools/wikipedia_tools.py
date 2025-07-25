@@ -26,7 +26,9 @@ class WikipediaTools:
     def _check_wikipedia(self):
         """Check if wikipedia package is installed."""
         if util.find_spec("wikipedia") is None:
-            raise ImportError("wikipedia package is not available. Please install it using: pip install wikipedia")
+            raise ImportError(
+                "wikipedia package is not available. Please install it using: pip install wikipedia"
+            )
         global wikipedia
         import wikipedia
         # Set default language to English
