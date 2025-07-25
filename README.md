@@ -510,7 +510,7 @@ praison agents.yaml
 
 ## Use 100+ Models
 
-- https://docs.praisonlabs.com/models/
+- https://docs.praisonlabs.com/docs/models/
 <div align="center">
   <a href="https://docs.praisonlabs.com/" target="_blank">
     <p align="center">
