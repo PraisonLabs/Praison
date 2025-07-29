@@ -5,15 +5,17 @@ A simple wrapper around existing stateful capabilities to provide a unified
 session API for developers building stateful agent applications.
 """
 
-import os
-import uuid
-import requests
 import json
+import os
 import time
+import uuid
 from typing import Any, Dict, List, Optional
+
+import requests
+
 from .agent import Agent
-from .memory import Memory
 from .knowledge import Knowledge
+from .memory import Memory
 
 
 class Session:
