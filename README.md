@@ -16,8 +16,6 @@
 
 # Praison AI
 
-<a href="https://trendshift.io/repositories/9130" target="_blank"><img src="https://trendshift.io/api/badge/repositories/9130" alt="PraisonLabs%2Fpraison | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-
 </div>
 
 praison is a production-ready Multi-AI Agents framework with self-reflection, designed to create AI Agents to automate and solve problems ranging from simple tasks to complex challenges. By integrating praison Agents, AG2 (Formerly AutoGen), and CrewAI into a low-code solution, it streamlines the building and management of multi-agent LLM systems, emphasising simplicity, customisation, and effective human-agent collaboration.
@@ -57,6 +55,7 @@ praison is a production-ready Multi-AI Agents framework with self-reflection, de
 ## Using Python Code
 
 Light weight package dedicated for coding:
+
 ```bash
 pip install praisonagents
 ```
@@ -68,6 +67,7 @@ export OPENAI_API_KEY=xxxxxxxxxxxxxxxxxxxxxx
 ### 1. Single Agent
 
 Create app.py file and add the code below:
+
 ```python
 from praisonagents import Agent
 agent = Agent(instructions="Your are a helpful AI assistant")
@@ -75,6 +75,7 @@ agent.start("Write a movie script about a robot in Mars")
 ```
 
 Run:
+
 ```bash
 python app.py
 ```
@@ -82,6 +83,7 @@ python app.py
 ### 2. Multi Agents
 
 Create app.py file and add the code below:
+
 ```python
 from praisonagents import Agent, praisonAgents
 
@@ -92,6 +94,7 @@ agents.start()
 ```
 
 Run:
+
 ```bash
 python app.py
 ```
@@ -99,6 +102,7 @@ python app.py
 ## Using No Code
 
 ### Auto Mode:
+
 ```bash
 pip install praison
 export OPENAI_API_KEY=xxxxxxxxxxxxxxxxxxxxxx
@@ -113,9 +117,9 @@ export OPENAI_API_KEY=xxxxxxxxxxxxxxxxxxxxxx
 ```
 
 ```javascript
-const { Agent } = require('praison');
-const agent = new Agent({ instructions: 'You are a helpful AI assistant' });
-agent.start('Write a movie script about a robot in Mars');
+const { Agent } = require("praison");
+const agent = new Agent({ instructions: "You are a helpful AI assistant" });
+agent.start("Write a movie script about a robot in Mars");
 ```
 
 ![praison CLI Demo](docs/demo/praison-cli-demo.gif)
@@ -130,22 +134,22 @@ graph LR
     Process --> Agent2
     Agent2 --> Output([✓ Output])
     Process -.-> Agent1
-    
+
     %% Define subgraphs for agents and their tasks
     subgraph Agent1[ ]
         Task1[📋 Task]
         AgentIcon1[🤖 AI Agent]
         Tools1[🔧 Tools]
-        
+
         Task1 --- AgentIcon1
         AgentIcon1 --- Tools1
     end
-    
+
     subgraph Agent2[ ]
         Task2[📋 Task]
         AgentIcon2[🤖 AI Agent]
         Tools2[🔧 Tools]
-        
+
         Task2 --- AgentIcon2
         AgentIcon2 --- Tools2
     end
@@ -262,22 +266,22 @@ Uses a manager agent to coordinate task execution and agent assignments.
 ```mermaid
 graph TB
     Input[Input] --> Manager
-    
+
     subgraph Agents
         Manager[Manager Agent]
-        
+
         subgraph Workers
             direction LR
             W1[Worker 1]
             W2[Worker 2]
             W3[Worker 3]
         end
-        
+
         Manager --> W1
         Manager --> W2
         Manager --> W3
     end
-    
+
     W1 --> Manager
     W2 --> Manager
     W3 --> Manager
@@ -299,7 +303,7 @@ Advanced process type supporting complex task relationships and conditional exec
 ```mermaid
 graph LR
     Input[Input] --> Start
-    
+
     subgraph Workflow
         direction LR
         Start[Start] --> C1{Condition}
@@ -309,7 +313,7 @@ graph LR
         A2 --> Join
         Join --> A3[Agent 3]
     end
-    
+
     A3 --> Output[Output]
 
     classDef input fill:#8B0000,stroke:#7C90A0,color:#fff
@@ -336,7 +340,7 @@ flowchart LR
     LLM1 --> Out[Out]
     LLM2 --> Out
     LLM3 --> Out
-    
+
     style In fill:#8B0000,color:#fff
     style Router fill:#2E8B57,color:#fff
     style LLM1 fill:#2E8B57,color:#fff
@@ -359,7 +363,7 @@ flowchart LR
     LLM2 --> Synthesizer
     LLM3 --> Synthesizer
     Synthesizer --> Out[Out]
-    
+
     style In fill:#8B0000,color:#fff
     style Router fill:#2E8B57,color:#fff
     style LLM1 fill:#2E8B57,color:#fff
@@ -379,7 +383,7 @@ flowchart LR
     LLM -->|ACTION| Environment[Environment]
     Environment -->|FEEDBACK| LLM
     LLM --> Stop[Stop]
-    
+
     style Human fill:#8B0000,color:#fff
     style LLM fill:#2E8B57,color:#fff
     style Environment fill:#8B0000,color:#fff
@@ -399,7 +403,7 @@ flowchart LR
     LLM2 --> Aggregator
     LLM3 --> Aggregator
     Aggregator --> Out[Out]
-    
+
     style In fill:#8B0000,color:#fff
     style LLM1 fill:#2E8B57,color:#fff
     style LLM2 fill:#2E8B57,color:#fff
@@ -417,7 +421,7 @@ flowchart LR
     In[In] --> LLM1[LLM Call 1] --> Gate{Gate}
     Gate -->|Pass| LLM2[LLM Call 2] -->|Output 2| LLM3[LLM Call 3] --> Out[Out]
     Gate -->|Fail| Exit[Exit]
-    
+
     style In fill:#8B0000,color:#fff
     style LLM1 fill:#2E8B57,color:#fff
     style LLM2 fill:#2E8B57,color:#fff
@@ -432,10 +436,10 @@ Create AI agents that can generate and optimize solutions through iterative feed
 
 ```mermaid
 flowchart LR
-    In[In] --> Generator[LLM Call Generator] 
+    In[In] --> Generator[LLM Call Generator]
     Generator -->|SOLUTION| Evaluator[LLM Call Evaluator] -->|ACCEPTED| Out[Out]
     Evaluator -->|REJECTED + FEEDBACK| Generator
-    
+
     style In fill:#8B0000,color:#fff
     style Generator fill:#2E8B57,color:#fff
     style Evaluator fill:#2E8B57,color:#fff
@@ -452,7 +456,7 @@ flowchart LR
     LoopAgent --> Task[Task]
     Task --> |Next iteration| LoopAgent
     Task --> |Done| Out[Output]
-    
+
     style In fill:#8B0000,color:#fff
     style LoopAgent fill:#2E8B57,color:#fff,shape:circle
     style Task fill:#2E8B57,color:#fff
@@ -470,12 +474,15 @@ flowchart LR
 </div>
 
 ## Ollama Integration
+
 ```bash
 export OPENAI_BASE_URL=http://localhost:11434/v1
 ```
 
 ## Groq Integration
+
 Replace xxxx with Groq API KEY:
+
 ```bash
 export OPENAI_API_KEY=xxxxxxxxxxx
 export OPENAI_BASE_URL=https://api.groq.com/openai/v1
@@ -503,7 +510,8 @@ roles:
         expected_output: "Complete script ready for production."
 ```
 
-*To run the playbook:*
+_To run the playbook:_
+
 ```bash
 praison agents.yaml
 ```
@@ -524,6 +532,7 @@ praison agents.yaml
 Below is used for development only.
 
 ### Using uv
+
 ```bash
 # Install uv if you haven't already
 pip install uv
