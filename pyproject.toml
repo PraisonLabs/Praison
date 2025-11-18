@@ -1,0 +1,5 @@
+[project]
+name = 'praison'
+version = '0.10.0'
+description = 'Production-ready multi-agent AI framework'
+requires-python = '>=3.9'
